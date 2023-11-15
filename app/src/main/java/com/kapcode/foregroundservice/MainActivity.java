@@ -1,4 +1,4 @@
-package com.kapcode.parentalcontrols;
+package com.kapcode.foregroundservice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,8 +10,6 @@ import android.content.Intent;
 import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.view.View;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MainActivity extends AppCompatActivity {
 static AlarmManager alarmManager;

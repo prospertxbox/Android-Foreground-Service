@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace = "com.kapcode.parentalcontrols"
+    namespace = "com.kapcode.foregroundservice"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kapcode.parentalcontrols"
-        minSdk = 24
+        applicationId = "com.kapcode.foregroundservice"
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"

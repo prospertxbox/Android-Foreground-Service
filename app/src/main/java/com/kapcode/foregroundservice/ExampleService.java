@@ -1,18 +1,15 @@
-package com.kapcode.parentalcontrols;
+package com.kapcode.foregroundservice;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -56,7 +53,7 @@ public class ExampleService extends Service {
             @Override
             public void run() {
                 int loop = 25;
-                while(serviceIsRunning.get() && loop >0){ //loop is simulating android killing off service, or end of work,
+                while(serviceIsRunning.get() && loop >0){ //loop counting down to 0 is simulating android killing off service, or end of work,
                     // you can use this to test watch dog, or to simulate end of work
                     System.out.println(loop);
                     loop--;
@@ -86,7 +83,7 @@ public class ExampleService extends Service {
         // do stuff like register for BroadcastReceiver, etc.
 
     }
-    @RequiresApi(Build.VERSION_CODES.O)
+    //requires API Level O ... 26 ... This is projects min sdk
     private String createNotificationChannel(NotificationManager notificationManager){
         String channelId = "my_service_channelid";
         String channelName = "My Foreground Service";

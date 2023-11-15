@@ -1,4 +1,4 @@
-package com.kapcode.parentalcontrols;
+package com.kapcode.foregroundservice;
 
 import android.content.Context;
 
